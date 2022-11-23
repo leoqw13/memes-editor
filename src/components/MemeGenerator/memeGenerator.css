@@ -1,0 +1,142 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 0;
+  color: rgb(10, 9, 9);
+  text-transform: uppercase;
+  font-size: 42px;
+  text-align: center;
+  font-weight: 900;
+  font-family: Vegur, "PT Sans", Verdana, sans-serif;
+  letter-spacing: 1px;
+}
+
+.memeGeneratorContainer {
+  background: #fff;
+  border: 1px solid #ccc;
+  margin: 2rem 8rem;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.memeSettings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.titleText {
+  margin: 25px 0 5px 0;
+}
+
+input {
+  margin: 5px 0 8px 0;
+}
+.fuente {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.fuente select {
+  padding: 2px;
+  width: 100%;
+  min-height: 44px;
+  line-height: 18px;
+  border-width: 2px;
+  border-style: solid;
+}
+.fuente input {
+  width: 3rem;
+  height: 44px;
+  padding: 0;
+  margin: 5px;
+}
+
+select,
+input {
+  height: 35px;
+  width: 300px;
+  font-size: 18px;
+}
+button {
+  height: 35px;
+  width: 160px;
+  margin: 5px 0;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(196, 196, 196);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.02);
+  background-color: rgb(176, 176, 176);
+}
+
+.btnDownload {
+  color: #fff;
+  border: 1px solid #00bff3;
+  background: #00aad9;
+  width: 310px;
+}
+
+figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.figure {
+  background-color: rgb(0, 0, 0);
+  height: 425px;
+  width: 425px;
+  margin: 10px;
+}
+.memeImage {
+  height: 400px;
+  width: 400px;
+}
+
+.memeText {
+  position: absolute;
+  margin: auto;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  word-wrap: break-word;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 900px) {
+  .memeGeneratorContainer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  figure {
+    height: 325px;
+    width: 325px;
+  }
+
+  .memeImage {
+    height: 300px;
+    width: 300px;
+  }
+}
