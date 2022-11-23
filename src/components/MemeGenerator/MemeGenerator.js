@@ -23,6 +23,24 @@ const MemeGenerator = () => {
   const [showText2, setShowText2] = useState(false);
   const [showText3, setShowText3] = useState(false);
 
+  const delPhrase = () => {
+    setFont("arial");
+    setTextColor("#ffff00");
+    setText("");
+  };
+  const delPhrase2 = () => {
+    setFont2("arial");
+    setTextColor2("#ffff00");
+    setText2("");
+    setShowText2(false);
+  };
+  const delPhrase3 = () => {
+    setFont3("arial");
+    setTextColor3("#ffff00");
+    setText3("");
+    setShowText3(false);
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -123,6 +141,7 @@ const MemeGenerator = () => {
             onSetTextSize={(e) => setTextSize(e.target.value)}
             onSetTextColor={(e) => setTextColor(e.target.value)}
             onSetFont={(e) => setFont(e.target.value)}
+            onDelText={delPhrase}
           />
           {showText2 ? (
             <MemeSettings
@@ -132,6 +151,7 @@ const MemeGenerator = () => {
               onSetTextSize={(e) => setTextSize2(e.target.value)}
               onSetTextColor={(e) => setTextColor2(e.target.value)}
               onSetFont={(e) => setFont2(e.target.value)}
+              onDelText={delPhrase2}
             />
           ) : (
             <button onClick={() => setShowText2(true)}>Agregar texto 2</button>
@@ -145,6 +165,7 @@ const MemeGenerator = () => {
               onSetTextSize={(e) => setTextSize3(e.target.value)}
               onSetTextColor={(e) => setTextColor3(e.target.value)}
               onSetFont={(e) => setFont3(e.target.value)}
+              onDelText={delPhrase3}
             />
           ) : (
             <button onClick={() => setShowText3(true)}>Agregar texto 3</button>

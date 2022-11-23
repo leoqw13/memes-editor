@@ -84,7 +84,10 @@ button:hover {
   transform: scale(1.02);
   background-color: rgb(176, 176, 176);
 }
-
+.deletePhrase {
+  display: flex;
+  justify-content: center;
+}
 .btnDownload {
   color: #fff;
   border: 1px solid #00bff3;

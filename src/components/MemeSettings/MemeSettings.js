@@ -5,6 +5,7 @@ const MemeSettings = ({
   onSetTextSize,
   onSetTextColor,
   onSetFont,
+  onDelText,
 }) => {
   return (
     <div>
@@ -39,6 +40,9 @@ const MemeSettings = ({
         value={textSize}
         onChange={onSetTextSize}
       ></input>
+      <div className="deletePhrase">
+        <button onClick={onDelText}>Borrar {textNumber}</button>
+      </div>
     </div>
   );
 };
