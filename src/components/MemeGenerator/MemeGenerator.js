@@ -4,7 +4,6 @@ import "./memeGenerator.css";
 import interact from "interactjs";
 import MemeSettings from "../MemeSettings/MemeSettings.js";
 import { getMemes } from "../../services/meme";
-const Spacing = () => {};
 
 const MemeGenerator = () => {
   const [memeList, setList] = useState([]);
@@ -16,6 +15,8 @@ const MemeGenerator = () => {
   const [textSize2, setTextSize2] = useState(22);
   const [textSize3, setTextSize3] = useState(22);
   const [font, setFont] = useState("arial");
+  const [font2, setFont2] = useState("arial");
+  const [font3, setFont3] = useState("arial");
   const [textColor, setTextColor] = useState("#FFF");
   const [textColor2, setTextColor2] = useState("#FFF");
   const [textColor3, setTextColor3] = useState("#FFF");
@@ -65,7 +66,7 @@ const MemeGenerator = () => {
     <>
       <div className="header">
         <h1>Generador de memes</h1>
-        <h2 className="titleText">Elegí una imagen</h2>
+        <h2 className="titleText">Elige una imagen</h2>
         <select onChange={(e) => setImage(e.target.value)}>
           {memeList.map((meme) => (
             <option key={meme.id} value={meme.url}>
@@ -92,6 +93,8 @@ const MemeGenerator = () => {
               style={{
                 color: `${textColor2}`,
                 fontSize: `${textSize2}px`,
+
+                fontFamily: `${font2}, serif`,
               }}
             >
               {memeText2}
@@ -101,6 +104,8 @@ const MemeGenerator = () => {
               style={{
                 color: `${textColor3}`,
                 fontSize: `${textSize3}px`,
+
+                fontFamily: `${font3}, serif`,
               }}
             >
               {memeText3}
@@ -109,7 +114,7 @@ const MemeGenerator = () => {
           </figure>
         </div>
         <div className="memeSettings">
-          <h2 className="titleText">Escribí hasta 3 textos</h2>
+          <h2 className="titleText">Escribe el texto del meme</h2>
           <p>Arrastralos para ubicarlos en la imagen</p>
           <MemeSettings
             textNumber={"Texto 1"}
@@ -126,7 +131,7 @@ const MemeGenerator = () => {
               onSetText={(e) => setText2(e.target.value)}
               onSetTextSize={(e) => setTextSize2(e.target.value)}
               onSetTextColor={(e) => setTextColor2(e.target.value)}
-              onSetFont={(e) => setFont(e.target.value)}
+              onSetFont={(e) => setFont2(e.target.value)}
             />
           ) : (
             <button onClick={() => setShowText2(true)}>Agregar texto 2</button>
@@ -139,6 +144,7 @@ const MemeGenerator = () => {
               onSetText={(e) => setText3(e.target.value)}
               onSetTextSize={(e) => setTextSize3(e.target.value)}
               onSetTextColor={(e) => setTextColor3(e.target.value)}
+              onSetFont={(e) => setFont3(e.target.value)}
             />
           ) : (
             <button onClick={() => setShowText3(true)}>Agregar texto 3</button>
