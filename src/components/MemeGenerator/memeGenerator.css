@@ -4,11 +4,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: #fff;
 }
 
 h1 {
   margin-bottom: 0;
-  color: rgb(10, 9, 9);
+  color: rgb(211, 205, 34);
   text-transform: uppercase;
   font-size: 42px;
   text-align: center;
@@ -90,9 +91,9 @@ button:hover {
 }
 .btnDownload {
   color: #fff;
-  border: 1px solid #00bff3;
-  background: #00aad9;
   width: 310px;
+  border: 1px solid #1bb76e;
+  background: #1bb76e;
 }
 
 figure {
